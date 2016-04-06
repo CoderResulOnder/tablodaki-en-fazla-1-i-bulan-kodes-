@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+srand((unsigned)time(NULL));
+
+    int x;
+    cout<<"kac satır olacak:";
+    cin>>x;
+    int dizi [x][100];
+    for(int i=0;i<x;i++){
+        for(int j=0;j<100;j++){
+            dizi[i][j]=rand()%2;
+        }
+    }
+    int sayac[100];
+    for(int i=0;i<100;i++){
+
+        sayac[i]=0;
+    }
+
+    for(int i=0;i<100;i++){
+        for(int j=0;j<x;j++){
+           if(dizi[j][i]) {
+                sayac[j]++;
+           }
+        }
+    }
+
+    for(int i=0;i<x;i++){
+            cout<<i+1<<". satır "<<endl;
+        for(int j=0;j<100;j++){
+            cout<<dizi[i][j];
+        }
+    cout<<endl;
+
+    }
+    
+    
+
+    return 0;
+}
