@@ -25,7 +25,7 @@ srand((unsigned)time(NULL));
 
     for(int i=0;i<100;i++){
         for(int j=0;j<x;j++){
-           if(dizi[j][i]) {
+           if(dizi[j][i]==1) {
                 sayac[j]++;
            }
         }
@@ -39,8 +39,8 @@ srand((unsigned)time(NULL));
     cout<<endl;
 
     }
-    
-    
+
+
 
     return 0;
 }
